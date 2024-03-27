@@ -1,7 +1,7 @@
 body {
   background-color: #fff5f5;
   color: #000000;  
-  font-family: Georgia, Times, serif;
+  font-family: sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -64,8 +64,9 @@ body {
     border: none; /* Adicionando uma borda de 2px sólida preta */
     background-color: #eee1ce;
     transition: background-color 0.3s ease; /* Transição suave de cor ao passar o mouse */
-    width: 100px;
+    width: 101px;
     height: 50px;
+    margin-bottom: 50px;
   }
 
   button:hover {
@@ -139,21 +140,70 @@ body {
 
   .caixa1{
     background-color: #8b8b8b96;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
+    margin-left: 300px;
     
   }
 
   .caixa2{
     background-color: #8b8b8b96;
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
   }
 
   .caixa3{
     background-color: #747373;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
+    margin-left: 600px;
   }
+  
+/* Ajustes para as caixas */
+.caixa-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.caixa1,
+.caixa2,
+.caixa3 {
+  width: calc(33.33% - 20px); /* 33.33% do espaço disponível com uma pequena margem */
+  margin-right: 20px; /* Margem direita entre as caixas */
+  margin-bottom: 20px; /* Margem inferior entre as caixas */
+  align-items: center;
+}
+
+.caixa1:last-child,
+.caixa2:last-child,
+.caixa3:last-child {
+  margin-right: 0; /* Remove a margem direita da última caixa em uma linha */
+}
+
+/* Clearfix para evitar problemas de layout */
+.caixa1::after,
+.caixa2::after,
+.caixa3::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Estilos para as imagens dentro das caixas */
+.caixa1 img,
+.caixa2 img,
+.caixa3 img {
+  max-width: 100%; /* Imagens responsivas */
+  height: auto;
+  display: block; /* Remover margens brancas abaixo das imagens */
+  margin: 0 auto;
+}
+
+/* Estilos para os botões dentro das caixas */
+.caixa1 button,
+.caixa2 button,
+.caixa3 button {
+  margin-top: 10px; /* Margem superior para separar do texto */
+}
   
